@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task",
+  "description": "Schema for task documents in Firestore",
+  "type": "object",
+  "properties": {
+    "completed": { "type": "boolean", "description": "Completion status" },
+    "created": { "type": "string", "format": "date-time", "description": "Creation time (timestamp)" },
+    "details": { "type": "string", "description": "Task details" },
+    "title": { "type": "string", "description": "Task title" },
+    "user": { "type": "string", "description": "Reference to /users/{uid}" }
+  },
+  "required": ["completed", "created", "title", "user"]
+}
